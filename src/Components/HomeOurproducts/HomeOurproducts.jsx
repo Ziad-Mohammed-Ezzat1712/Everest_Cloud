@@ -101,7 +101,7 @@ export default function HomeOurproducts() {
      
       <div className="mt-10">
         <Link
-          to="#"
+          to="/shop/shop"
           className="text-[#D1B88F] font-medium flex items-center justify-center gap-2 hover:underline"
         >
           View all products →
