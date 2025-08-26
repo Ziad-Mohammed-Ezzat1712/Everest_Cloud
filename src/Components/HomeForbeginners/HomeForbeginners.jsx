@@ -67,7 +67,7 @@ export default function HomeForbeginners() {
           Welcome to our store! There are many electronic cigarettes, e-liquids, accessories and vaping accessories in our store. Our customers appreciate us for a wide range of products: in our network there are products both premium segment and middle and budget categories at the same time.
         </p>
         <Link
-          href="#"
+              to="/contact"
           className="text-[#D1B88F] text-[20px] font-semibold inline-block border-b-2 border-[#D1B88F] hover:text-[#E9DFC9] hover:border-[#E9DFC9] transition"
         >
           Learn more

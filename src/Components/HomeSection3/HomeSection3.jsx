@@ -1,6 +1,6 @@
 import React from "react";
 import home2 from "../../assets/Images/home2.png";
-
+import { Link } from "react-router-dom";
 export default function HomeSection3() {
   return (
     <section className="">
@@ -37,9 +37,11 @@ export default function HomeSection3() {
               budget categories at the same time.
             </p>
           </div>
+           <Link to="/shop/shop">
           <button className="mt-4 bg-gradient-to-r from-[#D1B88F] to-[#E9DFC9] text-[#33404D] font-bold text-[25px] px-16 py-5 rounded-full shadow-md hover:opacity-90 transition hover:bg-gradient-to-r hover:from-[#33404D] hover:to-[#435260] hover:text-white">
             Shop now
           </button>
+          </Link>
         </div>
       </div>
     </section>

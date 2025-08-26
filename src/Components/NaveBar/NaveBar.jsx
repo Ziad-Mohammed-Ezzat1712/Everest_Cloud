@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import logo from "../../../public/logo.jpg";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
+
 
 export default function NaveBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +18,7 @@ export default function NaveBar() {
 
   return (
     <>
-      <nav className="w-full top-0 right-0 left-0 relative  px-30">
+      <nav className="w-full top-0 right-0 left-0 relative  xl:px-30">
         <div className="flex justify-between items-center mx-auto px-6 lg:px-12 py-4">
           {/* Logo */}
           <NavLink to="/" className="flex items-center">
@@ -26,42 +27,14 @@ export default function NaveBar() {
 
           {/* Desktop Menu */}
           <ul className="hidden lg:flex gap-6 items-center">
-            {/* Pages Dropdown */}
-            <li className="relative group">
-              <button
-                className="font-medium px-3 text-[18px] text-black"
-                onClick={() => toggleDropdown("pages")}
-              >
-                Pages ▾
-              </button>
-              {openDropdown === "pages" && (
-                <ul className="absolute top-full left-0 bg-white shadow-md rounded-md mt-2 py-2 w-40">
-                  <li>
-                    <NavLink
-                      to="/services"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Services
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      to="/pricing"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Pricing
-                    </NavLink>
-                  </li>
-                </ul>
-              )}
-            </li>
+      
 
             <li>
               <NavLink
                 to="/about"
                 className={({ isActive }) =>
                   `font-medium px-3 text-[18px] ${
-                    isActive ? "text-[#D72638]" : "text-black"
+                    isActive ? "text-[#D1B88F]" : "text-black"
                   }`
                 }
               >
@@ -73,7 +46,7 @@ export default function NaveBar() {
                 to="/team"
                 className={({ isActive }) =>
                   `font-medium px-3 text-[18px] ${
-                    isActive ? "text-[#D72638]" : "text-black"
+                    isActive ? "text-[#D1B88F]" : "text-black"
                   }`
                 }
               >
@@ -85,7 +58,7 @@ export default function NaveBar() {
                 to="/contact"
                 className={({ isActive }) =>
                   `font-medium px-3 text-[18px] ${
-                    isActive ? "text-[#D72638]" : "text-black"
+                    isActive ? "text-[#D1B88F]" : "text-black"
                   }`
                 }
               >
@@ -102,13 +75,21 @@ export default function NaveBar() {
                 Online Shop ▾
               </button>
               {openDropdown === "shop" && (
-                <ul className="absolute top-full left-0 bg-white shadow-md rounded-md mt-2 py-2 w-40">
+                <ul className="absolute z-50 top-full left-0 bg-white shadow-md rounded-md mt-2 py-2 w-40">
                   <li>
                     <NavLink
-                      to="/shop/products"
+                      to="/shop/shop"
                       className="block px-4 py-2 hover:bg-gray-100"
                     >
-                      Products
+                      shop
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/shop/login"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                       My account
                     </NavLink>
                   </li>
                   <li>
@@ -116,7 +97,15 @@ export default function NaveBar() {
                       to="/shop/cart"
                       className="block px-4 py-2 hover:bg-gray-100"
                     >
-                      Cart
+                      cart
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/shop/checkout"
+                      className="block px-4 py-2 hover:bg-gray-100"
+                    >
+                      Checkout
                     </NavLink>
                   </li>
                 </ul>
@@ -124,40 +113,24 @@ export default function NaveBar() {
             </li>
 
             {/* Blog Dropdown */}
-            <li className="relative group">
-              <button
-                className="font-medium px-3 text-[18px] text-black"
-                onClick={() => toggleDropdown("blog")}
+       <li>
+              <NavLink
+                to="/blog"
+                className={({ isActive }) =>
+                  `font-medium px-3 text-[18px] ${
+                    isActive ? "text-[#D1B88F]" : "text-black"
+                  }`
+                }
               >
-                Blog ▾
-              </button>
-              {openDropdown === "blog" && (
-                <ul className="absolute top-full left-0 bg-white shadow-md rounded-md mt-2 py-2 w-40">
-                  <li>
-                    <NavLink
-                      to="/blog/news"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      News
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      to="/blog/articles"
-                      className="block px-4 py-2 hover:bg-gray-100"
-                    >
-                      Articles
-                    </NavLink>
-                  </li>
-                </ul>
-              )}
+                Blog
+              </NavLink>
             </li>
 
             {/* Button */}
             <li>
-              <button className="border border-black px-[22px] py-[9px] font-semibold rounded-full hover:bg-black hover:text-white transition">
+              <Link to="contact"><button className="border border-[#D1B88F] hover:bg-gradient-to-r hover:from-[#D1B88F] hover:to-[#E9DFC9] cursor-pointer px-[22px] py-[9px] font-semibold rounded-full  transition ">
                 Buy Now
-              </button>
+              </button></Link>
             </li>
           </ul>
 
@@ -173,20 +146,7 @@ export default function NaveBar() {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="lg:hidden bg-white text-black absolute top-full left-0 w-full flex flex-col items-start p-5 space-y-4 z-30 shadow-md">
-            {/* Pages Dropdown */}
-            <details className="w-full">
-              <summary className="cursor-pointer py-2 border-b border-gray-200">
-                Pages
-              </summary>
-              <div className="flex flex-col pl-4">
-                <NavLink to="/services" className="py-2 border-b border-gray-100">
-                  Services
-                </NavLink>
-                <NavLink to="/pricing" className="py-2 border-b border-gray-100">
-                  Pricing
-                </NavLink>
-              </div>
-            </details>
+         
 
             <NavLink to="/about" className="w-full py-2 border-b border-gray-200">
               About Us
@@ -232,9 +192,9 @@ export default function NaveBar() {
             </details>
 
             {/* Button */}
-            <button className="border border-black px-[22px] py-[9px] rounded-full mt-3">
+            <Link to="contact"><button className="border border-[#D1B88F] hover:bg-gradient-to-r hover:from-[#D1B88F] hover:to-[#E9DFC9] cursor-pointer  px-[22px] py-[9px] rounded-full mt-3">
               Buy Now
-            </button>
+            </button></Link>
           </div>
         )}
       </nav>

@@ -1,13 +1,17 @@
 import React from "react";
-import logo from "../../../public/logo.jpg"
+import logo from "../../../public/logo.jpg";
 export default function Footer() {
   return (
     <footer className="bg-[#fafafa] pt-16 mt-0">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 px-6 md:px-12">
         {/* العمود الأول */}
         <div>
-           {/* <h2 className="text-xl font-bold mb-4">Wapo</h2> */}
-         <img src={logo} alt="logo" className="text-xl font-bold mb-4 w-32 h-22 object-cover rounded-2xl mt-0" />
+          {/* <h2 className="text-xl font-bold mb-4">Wapo</h2> */}
+          <img
+            src={logo}
+            alt="logo"
+            className="text-xl font-bold mb-4 w-32 h-22 object-cover rounded-2xl mt-0"
+          />
           <p className="text-gray-600 leading-relaxed">
             Reinventing the way of creating websites, we aim to create the most
             master-peaced WordPress theme available on the market.
@@ -43,7 +47,7 @@ export default function Footer() {
             />
             <button
               type="submit"
-              className="bg-gradient-to-r from-[#D1B88F] to-[#E9DFC9] hover:bg-orange-600 text-white px-6 py-3 rounded-r-full font-semibold"
+              className="bg-gradient-to-r from-[#D1B88F] text-[#33404D] to-[#E9DFC9] hover:bg-gradient-to-r hover:from-[#33404D] hover:to-[#435260] hover:text-white  px-6 py-3 rounded-r-full font-semibold cursor-pointer transition"
             >
               Subscribe
             </button>
@@ -58,12 +62,36 @@ export default function Footer() {
       <div className="border-t max-w-7xl mx-auto border-gray-200 mt-12 py-6 px-6 md:px-12 flex flex-col md:flex-row items-center justify-between text-sm text-gray-600">
         <p>Copyright ©2025 Wapo. All rights reserved.</p>
         <ul className="flex gap-6 mt-4 md:mt-0">
-          <li><a href="/" className="hover:text-black">Home</a></li>
-          <li><a href="#" className="hover:text-black">About Us</a></li>
-          <li><a href="#" className="hover:text-black">Our team</a></li>
-          <li><a href="#" className="hover:text-black">Shop</a></li>
-          <li><a href="#" className="hover:text-black">Blog</a></li>
-          <li><a href="#" className="hover:text-black">Contact Us</a></li>
+          <li>
+            <a href="/" className="hover:text-black">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="/about" className="hover:text-black">
+              About Us
+            </a>
+          </li>
+          <li>
+            <a href="/team" className="hover:text-black">
+              Our team
+            </a>
+          </li>
+          <li>
+            <a href="/shop/shop" className="hover:text-black">
+              Shop
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-black">
+              Blog
+            </a>
+          </li>
+          <li>
+            <a href="/contact" className="hover:text-black">
+              Contact Us
+            </a>
+          </li>
         </ul>
       </div>
     </footer>

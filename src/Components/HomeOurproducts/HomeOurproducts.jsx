@@ -6,6 +6,7 @@ import product3 from "../../assets//Images/product3.png"
 import product4 from "../../assets//Images/product4.png"
 import product5 from "../../assets//Images/product5.png"
 import product6 from "../../assets//Images/product6.png"
+import { Link } from "react-router-dom";
 export default function HomeOurproducts() {
   const products = [
     {
@@ -97,14 +98,14 @@ export default function HomeOurproducts() {
         ))}
       </div>
 
-      {/* زرار عرض كل المنتجات */}
+     
       <div className="mt-10">
-        <a
-          href="#"
+        <Link
+          to="#"
           className="text-[#D1B88F] font-medium flex items-center justify-center gap-2 hover:underline"
         >
           View all products →
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -17,7 +17,7 @@ const GiftCardSection = () => {
           find only original products at the best prices.
         </p>
         <Link
-          href="#"
+          to="/contact"
           className="text-[#D1B88F] text-[20px] font-semibold inline-block border-b-2 border-[#D1B88F] hover:text-[#E9DFC9] hover:border-[#E9DFC9] transition"
         >
           Learn more
