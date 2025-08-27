@@ -10,6 +10,8 @@ import ProductDetails from './Components/ProductDetails/ProductDetails';
 import Login from './Components/Login/Login';
 import Blog from './Components/Blog/Blog';
 import BlogDetails from './Components/BlogDetails/BlogDetails';
+import { DarkModeContext, DarkModeProvider } from './Context/DarkModeContext';
+import { useContext } from 'react';
 
 
 
@@ -42,14 +44,17 @@ let x = createBrowserRouter([
   
 
 function App() {
+ const { darkMode } = useContext(DarkModeContext);
 
 
   return(
   
   <>
-
+   <div className={darkMode ? "bg-gray-900 text-white" : "bg-white text-black"}>
+<DarkModeProvider>
       <RouterProvider router={x}></RouterProvider>
-
+      </DarkModeProvider>
+</div>
   </>
   )
 }

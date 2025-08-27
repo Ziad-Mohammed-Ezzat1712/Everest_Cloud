@@ -9,30 +9,39 @@ export default function AboutSection3() {
   });
 
   return (
+          <div className="bg-white dark:bg-gray-900 text-black dark:text-white transition-colors duration-300">
     <div
       ref={ref}
-      className="w-[75%] mx-auto flex flex-col md:flex-row items-center justify-around text-center gap-12 p-12  bg-white"
+      className="w-[75%] mx-auto flex flex-col md:flex-row items-center justify-around text-center gap-12 p-12 
+                 bg-white dark:bg-gray-900 rounded-2xl shadow-lg transition-colors duration-500"
     >
       <div>
-        <h1 className="text-5xl font-bold text-[#33404D]">
+        <h1 className="text-5xl font-bold text-[#33404D] dark:text-white">
           {inView ? <CountUp start={0} end={8000} duration={3} suffix="k" /> : "0"}
         </h1>
-        <p className="text-gray-600 mt-2">E-liquids sold last month</p>
+        <p className="text-gray-600 dark:text-gray-300 mt-2">
+          E-liquids sold last month
+        </p>
       </div>
 
       <div>
-        <h1 className="text-5xl font-bold text-[#33404D]">
+        <h1 className="text-5xl font-bold text-[#33404D] dark:text-white">
           {inView ? <CountUp start={0} end={50} duration={3} /> : "0"}
         </h1>
-        <p className="text-gray-600 mt-2">Shops around the world</p>
+        <p className="text-gray-600 dark:text-gray-300 mt-2">
+          Shops around the world
+        </p>
       </div>
 
       <div>
-        <h1 className="text-5xl font-bold text-[#33404D]">
+        <h1 className="text-5xl font-bold text-[#33404D] dark:text-white">
           {inView ? <CountUp start={0} end={10} duration={3} /> : "0"}
         </h1>
-        <p className="text-gray-600 mt-2">Years of experience</p>
+        <p className="text-gray-600 dark:text-gray-300 mt-2">
+          Years of experience
+        </p>
       </div>
+    </div>
     </div>
   );
 }
