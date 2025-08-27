@@ -16,11 +16,11 @@ export default function HomeForbeginners() {
         className="relative flex items-center justify-center"
       >
         {/* دوائر الأنيميشن */}
-        <span className="absolute xl:left-[240px] xl:top-[-250px] md:left-[235px] md:top-[-250px] left-[200px] top-[-250px] w-20 h-20 rounded-full bg-[#D1B88F] opacity-40 animate-ping"></span>
-        <span className="absolute xl:left-[240px] xl:top-[-250px] md:left-[235px] md:top-[-250px] left-[200px] top-[-250px] w-20 h-20 rounded-full bg-[#D1B88F] opacity-40 animate-ping delay-200"></span>
+        <span className="absolute xl:left-[240px] xl:top-[-250px] md:left-[235px] md:top-[-250px] sm:left-[225px] sm:top-[-220px] left-[130px] top-[-210px] w-20 h-20 rounded-full bg-[#D1B88F] opacity-40 animate-ping"></span>
+        <span className="absolute xl:left-[240px] xl:top-[-250px] md:left-[235px] md:top-[-250px] sm:left-[225px] sm:top-[-220px] left-[130px] top-[-210px] w-20 h-20 rounded-full bg-[#D1B88F] opacity-40 animate-ping delay-200"></span>
 
         {/* الزرار الأساسي */}
-        <div className="absolute xl:left-[240px] xl:top-[-250px] md:left-[235px] md:top-[-250px] left-[200px] top-[-250px] bg-[#D1B88F] cursor-pointer text-white hover:bg-white hover:text-black p-6 rounded-full shadow-lg hover:scale-105 transition-transform  z-10">
+        <div className="absolute xl:left-[240px] xl:top-[-250px] md:left-[235px] md:top-[-250px] sm:left-[225px] sm:top-[-220px] left-[130px] top-[-210px] bg-[#D1B88F] cursor-pointer text-white hover:bg-white hover:text-black p-6 rounded-full shadow-lg hover:scale-105 transition-transform  z-10">
           <FiPlay size={32} />
         </div>
       </button>
