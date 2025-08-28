@@ -87,24 +87,19 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="lg:hidden bg-white dark:bg-gray-900 text-black dark:text-white absolute top-full left-0 w-full flex flex-col items-start p-5 space-y-4 z-30 shadow-md">
-          <NavLink to="/about" className="w-full py-2 border-b border-gray-200 dark:border-gray-700">About Us</NavLink>
-          <NavLink to="/team" className="w-full py-2 border-b border-gray-200 dark:border-gray-700">Our Team</NavLink>
-          <NavLink to="/contact" className="w-full py-2 border-b border-gray-200 dark:border-gray-700">Contact Us</NavLink>
+          <NavLink to="/about" className={({ isActive }) =>`font-medium px-3 text-[18px] ${isActive ? "text-[#D1B88F]" : ""}`}>About Us</NavLink>
+          <NavLink to="/team" className={({ isActive }) =>`font-medium px-3 text-[18px] ${isActive ? "text-[#D1B88F]" : ""}`}>Our Team</NavLink>
+          <NavLink to="/contact" className={({ isActive }) =>`font-medium px-3 text-[18px] ${isActive ? "text-[#D1B88F]" : ""}`}>Contact Us</NavLink>
+<NavLink to="/blog" className={({ isActive }) =>`font-medium px-3 text-[18px] ${isActive ? "text-[#D1B88F]" : ""}`}>Blog</NavLink>
 
           <details className="w-full">
-            <summary className="cursor-pointer py-2 border-b border-gray-200 dark:border-gray-700">Online Shop</summary>
+            <summary className="cursor-pointer font-medium px-3 text-[18px] py-2 border-b border-gray-200 dark:border-gray-700">Online Shop</summary>
             <div className="flex flex-col pl-4">
-              <NavLink to="/shop/products" className="py-2 border-b border-gray-100 dark:border-gray-700">Products</NavLink>
-              <NavLink to="/shop/cart" className="py-2 border-b border-gray-100 dark:border-gray-700">Cart</NavLink>
-            </div>
-          </details>
-
-          <details className="w-full">
-            <summary className="cursor-pointer py-2 border-b border-gray-200 dark:border-gray-700">Blog</summary>
-            <div className="flex flex-col pl-4">
-              <NavLink to="/blog/news" className="py-2 border-b border-gray-100 dark:border-gray-700">News</NavLink>
-              <NavLink to="/blog/articles" className="py-2 border-b border-gray-100 dark:border-gray-700">Articles</NavLink>
-            </div>
+               <NavLink to="/shop/shop" className={({ isActive }) =>`font-medium px-3 text-[18px] ${isActive ? "text-[#D1B88F]" : ""}`}>Shop</NavLink>
+                <NavLink to="/shop/login" className={({ isActive }) =>`font-medium px-3 text-[18px] ${isActive ? "text-[#D1B88F]" : ""}`}>My Account</NavLink>
+                <NavLink to="/shop/cart" className={({ isActive }) =>`font-medium px-3 text-[18px] ${isActive ? "text-[#D1B88F]" : ""}`}>Cart</NavLink>
+                <NavLink to="/shop/checkout" className={({ isActive }) =>`font-medium px-3 text-[18px] ${isActive ? "text-[#D1B88F]" : ""}`}>Checkout</NavLink>
+           </div>
           </details>
 
           <Link to="/contact">
