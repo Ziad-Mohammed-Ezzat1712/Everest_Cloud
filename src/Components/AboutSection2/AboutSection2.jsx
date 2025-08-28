@@ -81,7 +81,7 @@ export default function AboutSection2() {
               budget categories at the same time.
             </p>
           </div>
-          <button className="mt-4 cursor-pointer bg-gradient-to-r from-[#D1B88F] to-[#E9DFC9] text-[#33404D] dark:from-[#33404D] dark:to-[#435260] dark:text-white font-bold text-[25px] px-16 py-5 rounded-full shadow-md hover:opacity-90 transition">
+          <button className="mt-4 cursor-pointer hover:text-white hover:bg-gradient-to-r hover:from-[#33404D] hover:to-[#435260] bg-gradient-to-r from-[#D1B88F] to-[#E9DFC9] dark:bg-gradient-to-r dark:from-[#D1B88F] dark:to-[#E9DFC9] text-[#33404D] dark:text-[#33404D] dark:hover:from-[#33404D] dark:hover:to-[#435260] dark:hover:text-white font-bold text-[25px] px-16 py-5 rounded-full shadow-md hover:opacity-90 transition">
             Shop now
           </button>
         </div>

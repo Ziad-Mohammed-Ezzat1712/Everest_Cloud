@@ -76,27 +76,27 @@ export default function HomeForbeginners() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-12 text-center">
           {/* Countries */}
           <div>
-            <h3 className="text-[120px] font-bold text-gray-300">95</h3>
-            <p className={`${darkMode ? "text-black" : "text-[#33404D]"} text-4xl font-bold -mt-28`}>Countries</p>
+            <h3 className="text-[120px] font-bold text-gray-300 dark:text-white">95</h3>
+            <p className={`${darkMode ? "text-[#D1B88F]" : "text-[#33404D]"} text-5xl font-bold -mt-28`}>Countries</p>
           </div>
           {/* Shops */}
           <div>
-            <h3 className="text-[100px] font-bold text-gray-300">
-              <span className="text-[120px] font-bold text-gray-300">5</span>0
+            <h3 className="text-[100px] font-bold text-gray-300 dark:text-white">
+              <span className="text-[120px] font-bold text-gray-300 dark:text-white">5</span>0
             </h3>
-            <p className={`${darkMode ? "text-black" : "text-[#33404D]"} text-4xl font-bold -mt-28`}>Shops</p>
+            <p className={`${darkMode ? "text-[#D1B88F]" : "text-[#33404D]"} text-5xl font-bold -mt-28`}>Shops</p>
           </div>
           {/* Years */}
           <div>
-            <h3 className="text-[120px] font-bold text-gray-300">10</h3>
-            <p className={`${darkMode ? "text-black" : "text-[#33404D]"} text-4xl font-bold -mt-28`}>Years</p>
+            <h3 className="text-[120px] font-bold text-gray-300 dark:text-white">10</h3>
+            <p className={`${darkMode ? "text-[#D1B88F]" : "text-[#33404D]"} text-5xl font-bold -mt-28`}>Years</p>
           </div>
           {/* Partners */}
           <div>
-            <h3 className="text-[100px] font-bold text-gray-300">
-              <span className="text-[120px] font-bold text-gray-300">4</span>0
+            <h3 className="text-[100px] font-bold text-gray-300 dark:text-white">
+              <span className="text-[120px] font-bold text-gray-300 dark:text-white">4</span>0
             </h3>
-            <p className={`${darkMode ? "text-black" : "text-[#33404D]"} text-4xl font-bold -mt-28`}>Partners</p>
+            <p className={`${darkMode ? "text-[#D1B88F]" : "text-[#33404D]"} text-5xl font-bold -mt-28`}>Partners</p>
           </div>
         </div>
       </section>

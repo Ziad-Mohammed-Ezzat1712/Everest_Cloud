@@ -12,7 +12,11 @@ import Blog from './Components/Blog/Blog';
 import BlogDetails from './Components/BlogDetails/BlogDetails';
 import { DarkModeContext, DarkModeProvider } from './Context/DarkModeContext';
 import { useContext } from 'react';
-
+import { CartProvider } from './Context/CartContext';
+import { ToastContainer } from 'react-toastify';
+import Cart from './Components/Cart/Cart';
+import Checkout from './Components/Checkout/Checkout';
+ 
 
 
 
@@ -35,6 +39,8 @@ let x = createBrowserRouter([
    {path:"/shop/login" , element:<Login/>},
    {path:"blog" , element:<Blog/>},
    {path:"/blog/:id" , element:<BlogDetails/>},
+   {path:"/shop/cart" , element:<Cart/>},
+   {path:"/shop/checkout" , element:<Checkout/>},
    
   ]
   }
@@ -50,11 +56,13 @@ function App() {
   return(
   
   <>
-   <div className={darkMode ? "bg-gray-900 text-white" : "bg-white text-black"}>
+ 
+    <CartProvider>
 <DarkModeProvider>
       <RouterProvider router={x}></RouterProvider>
       </DarkModeProvider>
-</div>
+      </CartProvider>
+   <ToastContainer />
   </>
   )
 }
