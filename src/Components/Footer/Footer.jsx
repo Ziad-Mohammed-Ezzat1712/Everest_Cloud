@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import logo from "../../../public/logo.jpg";
+import logo from "../../../public/evrest_logo.png";
 import { DarkModeContext } from "../../Context/DarkModeContext";
 
 export default function Footer() {
@@ -17,7 +17,7 @@ export default function Footer() {
           <img
             src={logo}
             alt="logo"
-            className="text-xl font-bold mb-4 w-32 h-22 object-cover rounded-2xl mt-0"
+            className="text-xl font-bold mb-4 w-[140px] h-[50px] object-contain rounded-2xl mt-0"
           />
           <p
             className={`leading-relaxed ${

@@ -38,7 +38,7 @@ export default function HomeSection3() {
             </p>
           </div>
           <Link to="/shop/shop">
-            <button className="mt-4 bg-gradient-to-r from-[#D1B88F] to-[#E9DFC9] text-[#33404D] dark:text-white font-bold text-[25px] px-16 py-5 rounded-full shadow-md hover:opacity-90 transition hover:bg-gradient-to-r hover:from-[#33404D] hover:to-[#435260] hover:text-white">
+            <button className="mt-4 cursor-pointer bg-gradient-to-r from-[#D1B88F] to-[#E9DFC9] text-[#33404D] dark:text-white font-bold text-[25px] px-16 py-5 rounded-full shadow-md hover:opacity-90 transition hover:bg-gradient-to-r hover:from-[#33404D] hover:to-[#435260] hover:text-white">
               Shop now
             </button>
           </Link>

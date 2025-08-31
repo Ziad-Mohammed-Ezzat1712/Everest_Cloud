@@ -1,6 +1,6 @@
 // src/components/Navbar.jsx
 import React, { useState, useContext } from "react";
-import logo from "../../../public/logo.jpg";
+import logo from "../../../public/evrest_logo.png";
 import { Link, NavLink } from "react-router-dom";
 import { FiMenu, FiX, FiSun, FiMoon } from "react-icons/fi";
 import { DarkModeContext } from "../../Context/DarkModeContext";
@@ -21,7 +21,7 @@ export default function Navbar() {
       <div className="flex justify-between items-center mx-auto px-6 lg:px-12 py-4">
         {/* Logo */}
         <NavLink to="/" className="flex items-center">
-          <img src={logo} alt="Logo" className="w-[100px] h-[54px] rounded-2xl" />
+          <img src={logo} alt="Logo" className="w-[140px] h-[50px] object-contain rounded-2xl" />
         </NavLink>
 
         {/* Desktop Menu */}
